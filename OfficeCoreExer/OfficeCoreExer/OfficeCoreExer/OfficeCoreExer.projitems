@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{6E5C63AE-F265-4437-B774-B514C43E5A8C}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>OfficeCoreExer</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)DelegateCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISongsFetchingService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ItunesService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)itunesSong.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)itunesSrvsRetSongs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MainViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PropChangedNotifiableBase.cs" />
+  </ItemGroup>
+</Project>

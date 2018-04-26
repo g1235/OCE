@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:OfficeCoreExer"
+             x:Class="OfficeCoreExer.MainPage">
+
+    <StackLayout>
+        <!--<StackLayout.Resources>
+            <ResourceDictionary>
+                <local:Bool2Not x:Key="Bool2Not"/>
+            </ResourceDictionary>
+        </StackLayout.Resources>-->
+        <Editor Text="{Binding Path=ArtistName,Mode=TwoWay}"/>
+        <!--<Button Text="Get artist's 10 rnd songs" Command="{Binding Path=Fetch10RndItunesSongsCommand}" IsEnabled="{Binding Path=NowFetchingSongs,Converter={StaticResource Bool2Not}}"/>-->
+        <Button Text="Get artist's 10 rnd songs" Command="{Binding Path=Fetch10RndItunesSongsCommand}" />
+        <ListView ItemsSource="{Binding  Path=TenRndSongs}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Text="{Binding trackName}"/>
+                    </ViewCell>
+\                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
